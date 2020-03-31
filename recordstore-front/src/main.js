@@ -10,16 +10,16 @@ import { securedAxiosInstance, plainAxiosInstance } from './config/axios'
 Vue.config.productionTip = false
 
 Vue.use(VueAxios, {
-	secured: securedAxiosInstance,
-	plain: plainAxiosInstance
+  secured: securedAxiosInstance,
+  plain: plainAxiosInstance
 })
 
 /* eslint-disable no-new */
 new Vue({
-	el: '#app',
-	router,
-	securedAxiosInstance,
-	plainAxiosInstance,
-	components: { App },
-	template: '<App/>'
+  el: '#app',
+  router,
+  securedAxiosInstance,
+  plainAxiosInstance,
+  components: { App },
+  template: '<App/>'
 })
