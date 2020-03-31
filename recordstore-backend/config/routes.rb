@@ -7,5 +7,9 @@ Rails.application.routes.draw do
       resources :artists
     end
   end
+  post "refresh", to: "refresh#create"
+  post "signin", to: "signin#create"
+  delete "signin", to: "signin#destroy"
+  post "signup", to: "signup#create"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

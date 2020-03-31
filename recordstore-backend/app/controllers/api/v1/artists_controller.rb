@@ -4,12 +4,13 @@ module Api
 end
 # Better than playing whack-a-mole with 'end' keyword
 class Api::V1::ArtistsController < ApplicationController
+  before_action :authorize_access_request!, except: [:show, :index]
   before_action :set_artist, only: [:show, :update, :destroy]
 
   # GET /artists
   def index
     @artists = Artist.all
-
+    
     render json: @artists
   end
 
