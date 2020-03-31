@@ -1,39 +1,34 @@
-<style>
-	.flex-center {
-		display: flex;
-		justify-content: space-around;
-	}
-	.col-mode {
-		display: flex;
-		flex-direction: column;
-	}
-	.btn-sized {
-		width: 300px;
-		height: 48px;
-	}
-	.btn-primary-color {
-		background-color: lightgreen;
-		border-color: green;
-		color: green;
-	}
-	.border {
-		border: 1px solid lightgrey;
-		border-radius: 5pt;
-	}
-	input {
-		height: 28pt;
-		margin-top: 1em;
-		color: grey;
-	}
-</style>
 <template>
-<section style='padding-top: 100px; height: 50vh; width: auto;' class='flex-center'>
-	<form class='border col-mode' @submit.prevent='signin' style=' height: 300px; width: 400px; justify-content: stretch; margin: 20px; padding: 40px; border: 1px solid lightgray;'>
-		<input class='border' id="email" type="email" placeholder="your@email.com">
-		<input class='border' id="password" type="password">
-		<input class='btn-sized btn-primary-color' type='submit' value='Sign in' style='align-self: center; margin-top: 100px;'>
-	</form>
-</section>
+<body class='bg-gray-100'>
+	<!-- mobile first -->
+	<div class='grid grid-cols-1 lg:grid-cols-2'>
+		<div class='bg-blue-800 lg:min-h-screen
+			lg:flex lg:items-center p-8 sm:p-12'>
+			<div class='flex-grow'>
+				<h1 class='text-white text-center text-2xl sm:text-5xl mb-2'>
+					Hello There!</h1>
+				<p class='text-center text-white sm:text-lg'>Please, login to start.</p>
+			</div>
+		</div>
+		<div class='lg:min-h=screen lg:flex lg:items-center p-12 lg:p-24 xl:p-48'>
+			<div class='flex-grow bg-white shadow-lg rounded-md border border-gray-300 p-8'>
+			<form class='flex-col w-full mt-8' @submit.prevent='signin'>
+
+				<input class='flex-1 w-full mt-4 input-default' type='text' id='email' name='email'
+				placeholder='Email' v-model='email'>
+
+				<input class='flex-1 w-full mt-4 input-default'
+				type='password' id='password' name='password'
+				placeholder='Password' v-model='password'>
+
+				<button type='submit' class='flex-shrink-0 btn btn-blue mt-4'>
+					Sign In
+				</button>
+			</form>
+			</div>
+		</div>
+	</div>
+</body>
 </template>
 
 <script>
