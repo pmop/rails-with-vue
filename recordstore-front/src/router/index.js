@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Signin from '@/components/Signin.vue'
-import Signup from '@/components/Signup.vue'
+import Signin from '@/components/signin.vue'
+import Signup from '@/components/signup.vue'
 import Records from '@/components/records.vue'
-import Artists from '@/components/Artists/artists.vue'
+import Artists from '@/components/artists.vue'
 
 Vue.use(Router)
 
