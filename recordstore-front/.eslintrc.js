@@ -28,6 +28,7 @@ module.exports = {
 	 ,'indent': 'off'
 	 ,'no-tabs': 0
 	 ,'standard/object-curly-even-spacing': 'off'
+	 ,'brace-style': 'off'
 
   }
 }
